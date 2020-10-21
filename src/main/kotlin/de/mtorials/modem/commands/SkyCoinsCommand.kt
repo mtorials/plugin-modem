@@ -12,6 +12,7 @@ import br.com.devsrsouza.kotlinbukkitapi.plugins.vault.permission
 import de.mtorials.modem.ModemPlugin
 import de.mtorials.modem.deposite
 import de.mtorials.modem.getBalance
+import de.mtorials.modem.withdraw
 import org.bukkit.ChatColor
 
 class SkyCoinsCommand(override val plugin: ModemPlugin) : WithPlugin<ModemPlugin> {
@@ -31,7 +32,7 @@ class SkyCoinsCommand(override val plugin: ModemPlugin) : WithPlugin<ModemPlugin
             command("withdraw") {
                 permission = "modem.deposit"
                 executorPlayer {
-                    player.deposite(double(0))
+                    player.withdraw(double(0))
                     player.msg("Withdraw!")
                 }
             }

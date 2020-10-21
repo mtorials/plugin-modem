@@ -45,7 +45,3 @@ class KitCommand(override val plugin: ModemPlugin) : WithPlugin<ModemPlugin> {
         }
     }
 }
-
-fun Executor<*>.failTooExpensive() {
-    fail("This kit is too expensive!".color(ChatColor.RED))
-}
