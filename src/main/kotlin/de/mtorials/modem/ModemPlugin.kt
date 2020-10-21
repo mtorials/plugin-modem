@@ -14,8 +14,11 @@ import de.mtorials.modem.config.Config
 import de.mtorials.modem.db.tables.GlobalPlayerStatistics
 import de.mtorials.modem.listeners.KillListener
 import de.mtorials.modem.listeners.SignListener
+import de.mtorials.modem.listeners.StatsListener
 import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.SchemaUtils
+import org.jetbrains.exposed.sql.StdOutSqlLogger
+import org.jetbrains.exposed.sql.addLogger
 import org.jetbrains.exposed.sql.transactions.transaction
 import java.io.File
 
@@ -43,6 +46,7 @@ class ModemPlugin : KotlinPlugin() {
 
     init {
         transaction {
+            addLogger(StdOutSqlLogger)
             SchemaUtils.create(GlobalPlayerStatistics)
         }
     }
@@ -59,6 +63,7 @@ class ModemPlugin : KotlinPlugin() {
         KitCommand(this)
         SkyCoinsCommand(this)
         SignListener(this)
+        StatsListener(this)
     }
     
     override fun onPluginDisable() {
