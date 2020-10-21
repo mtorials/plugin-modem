@@ -30,7 +30,7 @@ class SpawnCommand(override val plugin: ModemPlugin) : WithPlugin<ModemPlugin> {
                     if (playersLastDamage.containsKey(player.uniqueId)) server.currentTick - playersLastDamage[player.uniqueId]!!
                     else null
 
-                if (ticksSince == null || ticksSince > DELAY_TIME) {
+                if (ticksSince == null || ticksSince > DELAY_TIME || player.hasPermission("modem.nocooldown")) {
                     player.msg("Teleport...".color(ChatColor.GREEN))
                     player.teleport(player.world.spawnLocation)
                 } else {

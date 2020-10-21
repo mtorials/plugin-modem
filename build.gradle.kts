@@ -52,6 +52,7 @@ bukkit {
     description = "a skypvp plugin"
     author = "mtorials"
     website = "https://mtorials.de"
+    apiVersion = "1.13"
 }
 
 tasks {
