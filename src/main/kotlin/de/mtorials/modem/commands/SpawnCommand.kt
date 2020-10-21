@@ -55,12 +55,3 @@ class SpawnCommand(override val plugin: ModemPlugin) : WithPlugin<ModemPlugin> {
         }
     }
 }
-
-class Teleporter(
-    private val location: Location,
-    private val player: Player
-) : Runnable {
-    override fun run() {
-        player.teleport(location)
-    }
-}

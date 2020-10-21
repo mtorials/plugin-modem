@@ -1,47 +1,54 @@
 package de.mtorials.modem.commands
 
-import br.com.devsrsouza.kotlinbukkitapi.dsl.command.arguments.string
+import br.com.devsrsouza.kotlinbukkitapi.dsl.command.Executor
 import br.com.devsrsouza.kotlinbukkitapi.dsl.command.command
 import br.com.devsrsouza.kotlinbukkitapi.dsl.command.fail
 import br.com.devsrsouza.kotlinbukkitapi.dsl.command.player
+import br.com.devsrsouza.kotlinbukkitapi.dsl.menu.menu
+import br.com.devsrsouza.kotlinbukkitapi.dsl.menu.slot
+import br.com.devsrsouza.kotlinbukkitapi.extensions.item.displayName
 import br.com.devsrsouza.kotlinbukkitapi.extensions.item.item
 import br.com.devsrsouza.kotlinbukkitapi.extensions.plugin.WithPlugin
 import br.com.devsrsouza.kotlinbukkitapi.extensions.text.color
+import br.com.devsrsouza.kotlinbukkitapi.extensions.text.msg
+import br.com.devsrsouza.kotlinbukkitapi.extensions.text.translateColor
 import de.mtorials.modem.ModemPlugin
+import de.mtorials.modem.equip
 import de.mtorials.modem.getBalance
 import de.mtorials.modem.withdraw
 import org.bukkit.ChatColor
 import org.bukkit.Material
 
+
 class KitCommand(override val plugin: ModemPlugin) : WithPlugin<ModemPlugin> {
 
     init {
-        command("kit") {
-            permission = "modem.kit"
-            executorPlayer {
-                when (string(0)) {
-                    "wood" -> {
-                        if (player.getBalance() < 10.0) fail("This kit is too expensive!".color(ChatColor.RED))
-                        player.inventory.addItem(
-                            item(Material.LEATHER_CHESTPLATE),
-                            item(Material.LEATHER_BOOTS),
-                            item(Material.LEATHER_HELMET),
-                            item(Material.LEATHER_LEGGINGS),
-                            item(Material.WOODEN_SWORD)
-                        )
-                        player.withdraw(10.0)
-                    }
-                    "iron" -> {
-                        if (player.getBalance() < 25.0) fail("This kit is too expensive!".color(ChatColor.RED))
-                        player.inventory.addItem(
-                            item(Material.IRON_CHESTPLATE),
-                            item(Material.IRON_LEGGINGS),
-                            item(Material.IRON_SWORD)
-                        )
-                        player.withdraw(25.0);
+
+        val kitMenu = menu("Kits", 3, true) {
+            this@KitCommand.plugin.conf.config.kits.forEachIndexed { index, kit ->
+                slot(2, 1+index, item(kit.display).displayName(kit.name + " &c${kit.price}".translateColor())) {
+                    onClick {
+                        if (player.getBalance() < kit.price) {
+                            player.msg("This kit is too expensive!".color(ChatColor.RED))
+                            close()
+                        } else {
+                            player.inventory.equip(kit)
+                            player.withdraw(kit.price)
+                        }
                     }
                 }
             }
         }
+
+        command("kit") {
+            permission = "modem.kit"
+            executorPlayer {
+                kitMenu.openToPlayer(player)
+            }
+        }
     }
+}
+
+fun Executor<*>.failTooExpensive() {
+    fail("This kit is too expensive!".color(ChatColor.RED))
 }
