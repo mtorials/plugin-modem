@@ -10,6 +10,7 @@ import com.zaxxer.hikari.HikariDataSource
 import de.mtorials.modem.commands.KitCommand
 import de.mtorials.modem.commands.SkyCoinsCommand
 import de.mtorials.modem.commands.SpawnCommand
+import de.mtorials.modem.commands.StatsCommand
 import de.mtorials.modem.config.Config
 import de.mtorials.modem.db.tables.GlobalPlayerStatistics
 import de.mtorials.modem.listeners.KillListener
@@ -64,6 +65,7 @@ class ModemPlugin : KotlinPlugin() {
         SkyCoinsCommand(this)
         SignListener(this)
         StatsListener(this)
+        StatsCommand(this)
     }
     
     override fun onPluginDisable() {
