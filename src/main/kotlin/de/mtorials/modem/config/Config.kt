@@ -11,7 +11,7 @@ data class Config(
     val noPermissionMessage: String = "&cSorry, you do not have the permission to use this command!",
     val coins: Coins = Coins(),
     val delayTime: Int = 120,
-    //val kits: List<Kit> = listOf()
+    val database: DatabaseConfig = DatabaseConfig(),
     @Contextual
     val kits: List<Kit> = listOf(
         Kit(Material.STONE, "Stone Kit",10.0, listOf(Material.STONE_SWORD, Material.LEATHER_LEGGINGS, Material.LEATHER_CHESTPLATE)),
@@ -24,6 +24,16 @@ data class Config(
 @Serializable
 data class Coins(
     val coinsPerKill: Double = 10.0
+)
+
+@Serializable
+data class DatabaseConfig(
+    val type: String = "MySQL",
+    val hostname: String = "localhost",
+    val port: Int= 3306,
+    val database: String = "modem",
+    val user: String = "mcplug",
+    val password: String = "mcplug"
 )
 
 @Serializable

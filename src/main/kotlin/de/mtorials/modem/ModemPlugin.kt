@@ -31,12 +31,12 @@ class ModemPlugin : KotlinPlugin() {
     )
 
     private val dbConfig = DatabaseTypeConfig(
-        type = "MySQL",
-        hostname = "localhost",
-        port = 3306,
-        database = "modem",
-        user = "mcplug",
-        password = "mcplug"
+        type = conf.config.database.type,
+        hostname = conf.config.database.hostname,
+        port = conf.config.database.port.toShort(),
+        database = conf.config.database.database,
+        user = conf.config.database.user,
+        password = conf.config.database.password
     )
 
     private val databaseType = databaseTypeFrom(dataFolder = File("modem.dat"), config = dbConfig)
