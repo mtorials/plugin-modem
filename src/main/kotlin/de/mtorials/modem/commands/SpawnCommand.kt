@@ -15,12 +15,10 @@ import org.bukkit.entity.Player
 import org.bukkit.event.entity.EntityDamageEvent
 import java.util.*
 
-// in ticks
-const val DELAY_TIME = 120L
-
 class SpawnCommand(override val plugin: ModemPlugin) : WithPlugin<ModemPlugin> {
 
     private val playersLastDamage = mutableMapOf<UUID, Int>()
+    private val delayTime: Int = plugin.conf.config.delayTime
 
     init {
         command("spawn") {
@@ -30,13 +28,12 @@ class SpawnCommand(override val plugin: ModemPlugin) : WithPlugin<ModemPlugin> {
                     if (playersLastDamage.containsKey(player.uniqueId)) server.currentTick - playersLastDamage[player.uniqueId]!!
                     else null
 
-                if (ticksSince == null || ticksSince > DELAY_TIME || player.hasPermission("modem.nocooldown")) {
+                if (ticksSince == null || ticksSince > delayTime || player.hasPermission("modem.nocooldown")) {
                     player.msg("Teleport...".color(ChatColor.GREEN))
                     player.teleport(player.world.spawnLocation)
                 } else {
-                    player.msg("You can not warp when in combat. Wait for ${DELAY_TIME-ticksSince} ticks.".color(ChatColor.YELLOW))
+                    player.msg("You can not warp when in combat. Wait for ${delayTime - ticksSince} ticks.".color(ChatColor.YELLOW))
                 }
-                //player.server.scheduler.scheduleSyncDelayedTask(plugin, Teleporter(player.world.spawnLocation, player), DELAY_TIME)
             }
         }
         events {

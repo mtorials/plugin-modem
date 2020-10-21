@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76ad2404-7419-4d44-981a-60f45561089b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/de/mtorials/modem/listeners/SignListener.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/mtorials/modem/ModemPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/mtorials/modem/ModemPlugin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/mtorials/modem/commands/KitCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/mtorials/modem/commands/KitCommand.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/mtorials/modem/config/Config.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/mtorials/modem/config/Config.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/mtorials/modem/listeners/KillListener.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/mtorials/modem/listeners/KillListener.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/mtorials/modem/commands/SpawnCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/mtorials/modem/commands/SpawnCommand.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,14 +131,22 @@
       <option name="project" value="LOCAL" />
       <updated>1603293112443</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Signs for coins">
+      <created>1603309998110</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603309998110</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Combat cooldown for spawn teleport" />
     <MESSAGE value="Kits working!" />
     <MESSAGE value="Kits with menu and config!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Kits with menu and config!" />
+    <MESSAGE value="Signs for coins" />
+    <option name="LAST_COMMIT_MESSAGE" value="Signs for coins" />
   </component>
   <component name="WindowStateProjectService">
     <state x="751" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1603301950414">
@@ -153,10 +157,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="739" y="316" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603239145878" />
-    <state x="587" y="95" key="CommitChangelistDialog2" timestamp="1603293111159">
+    <state x="587" y="95" key="CommitChangelistDialog2" timestamp="1603309996838">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="587" y="95" key="CommitChangelistDialog2/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603293111159" />
+    <state x="587" y="95" key="CommitChangelistDialog2/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603309996838" />
     <state x="838" y="423" key="Github.ShareDialog" timestamp="1603271561564">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -181,6 +185,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="180" key="GridCell.Tab.0.right/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603308428391" />
+    <state x="540" y="268" key="IDE.errors.dialog" timestamp="1603310020739">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="540" y="268" key="IDE.errors.dialog/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603310020739" />
     <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1603293113930">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
