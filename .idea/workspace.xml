@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76ad2404-7419-4d44-981a-60f45561089b" name="Default Changelist" comment="" />
+    <list default="true" id="76ad2404-7419-4d44-981a-60f45561089b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/de/mtorials/modem/commands/SpawnCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/de/mtorials/modem/commands/SpawnCommand.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,7 +46,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -121,26 +124,30 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="838" y="423" key="Github.ShareDialog/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603271561564" />
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1603239622271">
+    <state x="732" y="224" key="Github.UntrackedFilesDialog" timestamp="1603271581266">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603239622271" />
-    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1603239622271">
+    <state x="732" y="224" key="Github.UntrackedFilesDialog/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603271581266" />
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1603275469936">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.center/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603239622271" />
-    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1603239622271">
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603275469936" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1603275469936">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.left/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603239622271" />
-    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1603239622271">
+    <state width="1877" height="285" key="GridCell.Tab.0.center/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603275469936" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1603275469935">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.right/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603239622271" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1603271290356">
+    <state width="1877" height="285" key="GridCell.Tab.0.left/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603275469935" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1603275469936">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603271290356" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603275469936" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1603271586725">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/-2304.-182.1024.1250/1920.18.1920.1050/-1280.-181.1280.994/0.0.1920.1050/3840.69.1280.994@0.0.1920.1050" timestamp="1603271586725" />
     <state x="710" y="426" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1603271285046">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
