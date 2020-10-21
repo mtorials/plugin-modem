@@ -9,6 +9,7 @@ import de.mtorials.modem.commands.SkyCoinsCommand
 import de.mtorials.modem.commands.SpawnCommand
 import de.mtorials.modem.config.Config
 import de.mtorials.modem.listeners.KillListener
+import de.mtorials.modem.listeners.SignListener
 
 class ModemPlugin : KotlinPlugin() {
 
@@ -29,6 +30,7 @@ class ModemPlugin : KotlinPlugin() {
         KillListener(this)
         KitCommand(this)
         SkyCoinsCommand(this)
+        SignListener(this)
     }
     
     override fun onPluginDisable() {

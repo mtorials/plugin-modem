@@ -14,16 +14,18 @@ import org.bukkit.event.player.PlayerRespawnEvent
 import org.spigotmc.event.player.PlayerSpawnLocationEvent
 
 const val EXPECTED_MAX_HEALTH = 20.0
-const val COINS_PER_KILL = 10.0
 
 class KillListener(override val plugin: ModemPlugin) : WithPlugin<ModemPlugin> {
     init {
+
+        val coinsPerKill = plugin.conf.config.coins.coinsPerKill
+
         events {
             event<PlayerDeathEvent> {
                 entity.killer?.health = EXPECTED_MAX_HEALTH
                 entity.killer?.msg("You killed ${entity.name}. MAX HEALTH".color(ChatColor.GREEN))
-                entity.killer?.msg("+ $COINS_PER_KILL coins".color(ChatColor.GREEN))
-                entity.killer?.deposite(COINS_PER_KILL)
+                entity.killer?.msg(("+ $coinsPerKill").color(ChatColor.GREEN))
+                entity.killer?.deposite(coinsPerKill)
             }
             event<PlayerRespawnEvent> {
                 player.msg("Equipped with standard kit!".color(ChatColor.BLUE))

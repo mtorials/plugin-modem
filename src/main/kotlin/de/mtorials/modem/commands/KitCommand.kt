@@ -17,16 +17,14 @@ import de.mtorials.modem.equip
 import de.mtorials.modem.getBalance
 import de.mtorials.modem.withdraw
 import org.bukkit.ChatColor
-import org.bukkit.Material
 
 
 class KitCommand(override val plugin: ModemPlugin) : WithPlugin<ModemPlugin> {
 
     init {
-
-        val kitMenu = menu("Kits", 3, true) {
+        val kitMenu = menu("Kits", 1, true) {
             this@KitCommand.plugin.conf.config.kits.forEachIndexed { index, kit ->
-                slot(2, 1+index, item(kit.display).displayName(kit.name + " &c${kit.price}".translateColor())) {
+                slot(1, 1+index, item(kit.display).displayName(kit.name + " &c${kit.price}".translateColor())) {
                     onClick {
                         if (player.getBalance() < kit.price) {
                             player.msg("This kit is too expensive!".color(ChatColor.RED))
@@ -39,7 +37,6 @@ class KitCommand(override val plugin: ModemPlugin) : WithPlugin<ModemPlugin> {
                 }
             }
         }
-
         command("kit") {
             permission = "modem.kit"
             executorPlayer {

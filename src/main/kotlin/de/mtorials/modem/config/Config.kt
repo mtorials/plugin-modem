@@ -10,6 +10,7 @@ data class Config(
     @ChangeColor
     val noPermissionMessage: String = "&cSorry, you do not have the permission to use this command!",
     val coins: Coins = Coins(),
+    val delayTime: Int = 120,
     //val kits: List<Kit> = listOf()
     @Contextual
     val kits: List<Kit> = listOf(
