@@ -8,6 +8,7 @@ import org.bukkit.inventory.PlayerInventory
 fun PlayerInventory.standardKit() {
     this.setArmorContents(arrayOf(null, item(Material.LEATHER_LEGGINGS), item(Material.LEATHER_CHESTPLATE), null))
     this.addItem(item(Material.STONE_SWORD))
+    this.setItemInOffHand(item(Material.SHIELD))
 }
 
 fun PlayerInventory.equip(kit: Kit) {
