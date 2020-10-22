@@ -12,6 +12,7 @@ data class Config(
     val coins: Coins = Coins(),
     val delayTime: Int = 120,
     val database: DatabaseConfig = DatabaseConfig(),
+    val buildServerName: String =  "build",
     @Contextual
     val kits: List<Kit> = listOf(
         Kit(Material.STONE, "Stone Kit",10.0, listOf(Material.STONE_SWORD, Material.LEATHER_LEGGINGS, Material.LEATHER_CHESTPLATE)),

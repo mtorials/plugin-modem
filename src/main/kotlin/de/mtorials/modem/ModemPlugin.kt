@@ -7,10 +7,7 @@ import br.com.devsrsouza.kotlinbukkitapi.exposed.databaseTypeFrom
 import br.com.devsrsouza.kotlinbukkitapi.extensions.text.msg
 import br.com.devsrsouza.kotlinbukkitapi.serialization.architecture.config
 import com.zaxxer.hikari.HikariDataSource
-import de.mtorials.modem.commands.KitCommand
-import de.mtorials.modem.commands.SkyCoinsCommand
-import de.mtorials.modem.commands.SpawnCommand
-import de.mtorials.modem.commands.StatsCommand
+import de.mtorials.modem.commands.*
 import de.mtorials.modem.config.Config
 import de.mtorials.modem.db.tables.GlobalPlayerStatistics
 import de.mtorials.modem.listeners.KillListener
@@ -66,6 +63,7 @@ class ModemPlugin : KotlinPlugin() {
         SignListener(this)
         StatsListener(this)
         StatsCommand(this)
+        BuildCommand(this)
     }
     
     override fun onPluginDisable() {
