@@ -35,6 +35,7 @@ class ElytraListener(override val plugin: ModemPlugin) : WithPlugin<ModemPlugin>
         events {
             event<PlayerMoveEvent> {
                 if (!elytraRegion.contains(player.location.blockX, player.location.blockY, player.location.blockZ)) return@event
+                if (chestItemByPlayer.containsKey(player.uniqueId)) return@event
                 chestItemByPlayer[player.uniqueId] = player.inventory.armorContents[chestSlot]
                 player.inventory.setArmorContents(arrayOf(
                     player.inventory.armorContents[0],
@@ -42,7 +43,6 @@ class ElytraListener(override val plugin: ModemPlugin) : WithPlugin<ModemPlugin>
                     item(Material.ELYTRA),
                     player.inventory.armorContents[3]
                 ))
-                player.msg("You got an Elytra: FLY BABY FLY!")
             }
             event<PlayerMoveEvent> {
                 if (!(player as Entity).isOnGround) return@event
@@ -54,7 +54,6 @@ class ElytraListener(override val plugin: ModemPlugin) : WithPlugin<ModemPlugin>
                     player.inventory.armorContents[3]
                 ))
                 chestItemByPlayer.remove(player.uniqueId)
-                player.msg("No elytra anymore...")
             }
             event<InventoryClickEvent> {
                 if (this.currentItem?.type != Material.ELYTRA) return@event
