@@ -10,6 +10,7 @@ import com.zaxxer.hikari.HikariDataSource
 import de.mtorials.modem.commands.*
 import de.mtorials.modem.config.Config
 import de.mtorials.modem.db.tables.GlobalPlayerStatistics
+import de.mtorials.modem.listeners.ElytraListener
 import de.mtorials.modem.listeners.KillListener
 import de.mtorials.modem.listeners.SignListener
 import de.mtorials.modem.listeners.StatsListener
@@ -64,6 +65,7 @@ class ModemPlugin : KotlinPlugin() {
         StatsListener(this)
         StatsCommand(this)
         BuildCommand(this)
+        ElytraListener(this)
     }
     
     override fun onPluginDisable() {
