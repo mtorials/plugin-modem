@@ -66,6 +66,7 @@ class ModemPlugin : KotlinPlugin() {
         StatsCommand(this)
         BuildCommand(this)
         ElytraListener(this)
+        FlyCommand(this)
     }
     
     override fun onPluginDisable() {
