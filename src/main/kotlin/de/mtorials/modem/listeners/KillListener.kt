@@ -33,7 +33,7 @@ class KillListener(override val plugin: ModemPlugin) : WithPlugin<ModemPlugin> {
             }
             event<PlayerRespawnEvent> {
                 player.msg("Equipped with standard kit!".color(ChatColor.BLUE))
-                player.inventory.standardKit()
+                player.inventory.standardKit(this@KillListener.plugin.conf.config.standardKit)
             }
         }
     }

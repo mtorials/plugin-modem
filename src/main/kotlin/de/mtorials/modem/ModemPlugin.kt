@@ -64,6 +64,7 @@ class ModemPlugin : KotlinPlugin() {
         BuildCommand(this)
         ElytraListener(this)
         FlyCommand(this)
+        DropListener(this)
         if (conf.config.joinOnSpawnPoint) JoinListener(this)
     }
     
