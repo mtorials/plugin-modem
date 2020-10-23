@@ -33,7 +33,7 @@ class ElytraListener(override val plugin: ModemPlugin) : WithPlugin<ModemPlugin>
 
     init {
         events {
-            event<PlayerJumpEvent> {
+            event<PlayerMoveEvent> {
                 if (!elytraRegion.contains(player.location.blockX, player.location.blockY, player.location.blockZ)) return@event
                 chestItemByPlayer[player.uniqueId] = player.inventory.armorContents[chestSlot]
                 player.inventory.setArmorContents(arrayOf(
