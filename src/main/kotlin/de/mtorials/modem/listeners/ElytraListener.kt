@@ -4,6 +4,7 @@ import br.com.devsrsouza.kotlinbukkitapi.extensions.event.event
 import br.com.devsrsouza.kotlinbukkitapi.extensions.event.events
 import br.com.devsrsouza.kotlinbukkitapi.extensions.item.item
 import br.com.devsrsouza.kotlinbukkitapi.extensions.plugin.WithPlugin
+import br.com.devsrsouza.kotlinbukkitapi.extensions.server.player
 import br.com.devsrsouza.kotlinbukkitapi.extensions.text.msg
 import com.destroystokyo.paper.event.player.PlayerJumpEvent
 import com.sk89q.worldedit.bukkit.BukkitAdapter
@@ -17,6 +18,8 @@ import org.bukkit.Location
 import org.bukkit.Material
 import org.bukkit.entity.Entity
 import org.bukkit.entity.Player
+import org.bukkit.event.Event
+import org.bukkit.event.inventory.InventoryClickEvent
 import org.bukkit.event.player.PlayerMoveEvent
 import org.bukkit.inventory.ItemStack
 import java.util.*
@@ -52,6 +55,10 @@ class ElytraListener(override val plugin: ModemPlugin) : WithPlugin<ModemPlugin>
                 ))
                 chestItemByPlayer.remove(player.uniqueId)
                 player.msg("No elytra anymore...")
+            }
+            event<InventoryClickEvent> {
+                if (this.currentItem?.type != Material.ELYTRA) return@event
+                result = Event.Result.DENY
             }
         }
     }
