@@ -10,10 +10,7 @@ import com.zaxxer.hikari.HikariDataSource
 import de.mtorials.modem.commands.*
 import de.mtorials.modem.config.Config
 import de.mtorials.modem.db.tables.GlobalPlayerStatistics
-import de.mtorials.modem.listeners.ElytraListener
-import de.mtorials.modem.listeners.KillListener
-import de.mtorials.modem.listeners.SignListener
-import de.mtorials.modem.listeners.StatsListener
+import de.mtorials.modem.listeners.*
 import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.SchemaUtils
 import org.jetbrains.exposed.sql.StdOutSqlLogger
@@ -67,6 +64,7 @@ class ModemPlugin : KotlinPlugin() {
         BuildCommand(this)
         ElytraListener(this)
         FlyCommand(this)
+        if (conf.config.joinOnSpawnPoint) JoinListener(this)
     }
     
     override fun onPluginDisable() {

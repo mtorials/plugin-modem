@@ -15,6 +15,7 @@ data class Config(
     val buildServerName: String =  "build",
     val elytraRegionName: String = "elytra",
     val lobbyWorldName: String = "lobby",
+    val joinOnSpawnPoint: Boolean = true,
     @Contextual
     val kits: List<Kit> = listOf(
         Kit(Material.STONE, "Stone Kit",10.0, listOf(Material.STONE_SWORD, Material.LEATHER_LEGGINGS, Material.LEATHER_CHESTPLATE)),
